@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
+const React = require("react");
 
-const CompLibrary = require('../../core/CompLibrary.js');
+const CompLibrary = require("../../core/CompLibrary.js");
 
 const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
@@ -15,10 +15,10 @@ const GridBlock = CompLibrary.GridBlock;
 
 class HomeSplash extends React.Component {
   render() {
-    const {siteConfig, language = ''} = this.props;
-    const {baseUrl, docsUrl} = siteConfig;
-    const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
-    const langPart = `${language ? `${language}/` : ''}`;
+    const { siteConfig, language = "" } = this.props;
+    const { baseUrl, docsUrl } = siteConfig;
+    const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
+    const langPart = `${language ? `${language}/` : ""}`;
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
     const SplashContainer = props => (
@@ -64,9 +64,10 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href="#try">背景</Button>
+            <Button href="#tools">攻略</Button>
+            <Button href="#work">行走</Button>
+            <Button href={docUrl("doc2.html")}>卓越</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -76,12 +77,12 @@ class HomeSplash extends React.Component {
 
 class Index extends React.Component {
   render() {
-    const {config: siteConfig, language = ''} = this.props;
-    const {baseUrl} = siteConfig;
+    const { config: siteConfig, language = "" } = this.props;
+    const { baseUrl } = siteConfig;
 
     const Block = props => (
       <Container
-        padding={['bottom', 'top']}
+        padding={["bottom", "top"]}
         id={props.id}
         background={props.background}>
         <GridBlock
@@ -95,8 +96,8 @@ class Index extends React.Component {
     const FeatureCallout = () => (
       <div
         className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
+        style={{ textAlign: "center" }}>
+        <h2>学无止境，永攀高峰</h2>
         <MarkdownBlock>These are features of this project</MarkdownBlock>
       </div>
     );
@@ -105,42 +106,37 @@ class Index extends React.Component {
       <Block id="try">
         {[
           {
-            content:
-              'To make your landing page more attractive, use illustrations! Check out ' +
-              '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
-              'The illustrations you see on this page are from unDraw.',
-            image: `${baseUrl}img/undraw_code_review.svg`,
-            imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
-          },
+            content: "很久很久以前，",
+            image: `${baseUrl}img/undraw_note_list.svg`,
+            imageAlign: "left",
+            title: "背景"
+          }
         ]}
       </Block>
     );
 
     const Description = () => (
-      <Block background="dark">
+      <Block id="work" background="dark">
         {[
           {
-            content:
-              'This is another description of how this project is useful',
+            content: "爬，滚，走，跑",
             image: `${baseUrl}img/undraw_note_list.svg`,
-            imageAlign: 'right',
-            title: 'Description',
-          },
+            imageAlign: "left",
+            title: "行走"
+          }
         ]}
       </Block>
     );
 
     const LearnHow = () => (
-      <Block background="light">
+      <Block id="tools" background="light">
         {[
           {
-            content:
-              'Each new Docusaurus project has **randomly-generated** theme colors.',
+            content: "初级，中级，高级",
             image: `${baseUrl}img/undraw_youtube_tutorial.svg`,
-            imageAlign: 'right',
-            title: 'Randomly Generated Theme Colors',
-          },
+            imageAlign: "right",
+            title: "攻略"
+          }
         ]}
       </Block>
     );
@@ -149,17 +145,23 @@ class Index extends React.Component {
       <Block layout="fourColumn">
         {[
           {
-            content: 'This is the content of my feature',
+            content: "This is the content of my life",
             image: `${baseUrl}img/undraw_react.svg`,
-            imageAlign: 'top',
-            title: 'Feature One',
+            imageAlign: "top",
+            title: "记录"
           },
           {
-            content: 'The content of my second feature',
+            content: "The content of my conclusion",
             image: `${baseUrl}img/undraw_operating_system.svg`,
-            imageAlign: 'top',
-            title: 'Feature Two',
+            imageAlign: "top",
+            title: "总结"
           },
+          {
+            content: "The content of my aims",
+            image: `${baseUrl}img/undraw_operating_system.svg`,
+            imageAlign: "top",
+            title: "提升"
+          }
         ]}
       </Block>
     );
@@ -177,16 +179,16 @@ class Index extends React.Component {
           </a>
         ));
 
-      const pageUrl = page => baseUrl + (language ? `${language}/` : '') + page;
+      const pageUrl = page => baseUrl + (language ? `${language}/` : "") + page;
 
       return (
         <div className="productShowcaseSection paddingBottom">
-          <h2>Who is Using This?</h2>
-          <p>This project is used by all these people</p>
+          <h2>谁会用她呢?</h2>
+          <p>欢迎大家发布文章到网站和提出宝贵意见</p>
           <div className="logos">{showcase}</div>
           <div className="more-users">
-            <a className="button" href={pageUrl('users.html')}>
-              More {siteConfig.title} Users
+            <a className="button" href={pageUrl("users.html")}>
+              更多 {siteConfig.title} 信息
             </a>
           </div>
         </div>
@@ -199,8 +201,8 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Features />
           <FeatureCallout />
-          <LearnHow />
           <TryOut />
+          <LearnHow />
           <Description />
           <Showcase />
         </div>

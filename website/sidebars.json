@@ -1,8 +1,8 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "run and run ": ["doc1"],
+    "无规矩 不方圆": ["doc2"],
+    "行万里路": ["doc3"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]
