@@ -21,7 +21,7 @@ sidebar_label: React
 
 ### render()
 
-每次组件更新都会调用 render()方法。
+每次组件更新都会调用 render()方法。组件的props和state(无论重传递还是重赋值，无论值是否有变化，都会引起组件的重新render)
 
 ### componentDidMount
 
@@ -31,7 +31,7 @@ sidebar_label: React
 
 ### shouldComponentUpdate
 
-有两个参数 nextProps 和 nextState，表示新的属性和变化之后的 state，返回一个布尔值，true 表示会触发重新渲染，false 表示不会触发重新渲染，默认返回 true
+有两个参数 nextProps 和 nextState，表示新的属性和变化之后的 state，返回一个布尔值，true 表示会触发重新渲染，false 表示不会触发重新渲染，默认返回 true,可用于组件优化。
 
 ### getSnapshotBeforeUpdate
 
