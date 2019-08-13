@@ -1,10 +1,10 @@
 {
   "docs": {
-    "run and run ": ["doc1"],
+    "run and run": ["doc1", "form"],
     "无规矩 不方圆": ["doc2"],
-    "行万里路": ["doc3"]
+    "行万里路": ["doc3", "git"]
   },
   "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "First Category": ["doc4", "doc5", "antd"]
   }
 }

@@ -1,7 +1,7 @@
 ---
 id: doc1
-title: Latin-ish
-sidebar_label: Example Page
+title: 图片库
+sidebar_label: 图片库
 ---
 
 Check the [documentation](https://docusaurus.io) for how to use Docusaurus.
