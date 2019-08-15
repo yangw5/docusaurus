@@ -21,7 +21,7 @@ sidebar_label: React
 
 ### render()
 
-每次组件更新都会调用 render()方法。组件的props和state(无论重传递还是重赋值，无论值是否有变化，都会引起组件的重新render)
+每次组件更新都会调用 render()方法。组件的 props 和 state(无论重传递还是重赋值，无论值是否有变化，都会引起组件的重新 render)
 
 ### componentDidMount
 
@@ -40,3 +40,9 @@ sidebar_label: React
 注：代替 componentWillUpdate/UNSAVE_componentWillUpdate
 
 ### componentDidUpdata
+
+## 高阶组件（HOC）
+
+    高阶组件是一个函数，接收一个组件参数，返回新的组件。为实现组件代码的复用。
+
+    高阶组件内部的包装组件和被包装组件之间通过 props 传递数据。

@@ -54,6 +54,9 @@ sidebar_label: Hook
 
 useRef 返回一个可变的 ref 对象，其 .current 属性被初始化为传入的参数（initialValue）。返回的 ref 对象在组件的整个生命周期内保持不变。React 都会将 ref 对象的 .current 属性设置为相应的 DOM 节点。
 
+父组件获取子组件的方法：通过子组件引入 forwardRef, useImperativeHandle 设置,父组件对子组件设置 ref, 通过处理，父组件获取 HOC 子 ref。 使用
+useImperativeHandle(ref, () => modalRef.current)，是将子组件自生暴露给父组件的 ref 属性;forwardRef 包裹子组件，获取 ref。就可使用子组件的 modalRef.current.xx()方法了。
+
     function TextInputWithFocusButton() {
         const inputEl = useRef(null);
         const onButtonClick = () => {
@@ -66,8 +69,10 @@ useRef 返回一个可变的 ref 对象，其 .current 属性被初始化为传�
             <button onClick={onButtonClick}>Focus the input</button>
         </>
 
-);
-}
+     );
+    }
+
+[实例链接](https://codesandbox.io/s/sharp-meitner-grhmo) 见 hook.js 文件
 
 ### 获取上一轮的 props 或 state
 
