@@ -2,7 +2,8 @@
   "docs": {
     "run and run": ["doc1", "form"],
     "无规矩 不方圆": ["doc2"],
-    "行万里路": ["doc3", "git", "react", "antd", "Hook", "es6", "devmodul"]
+    "行万里路": ["doc3", "git", "react", "antd", "Hook", "es6", "devmodul"],
+    "怪谈怪鱼": ["es6monster"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5", "antd"]
