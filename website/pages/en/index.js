@@ -84,7 +84,8 @@ class Index extends React.Component {
       <Container
         padding={["bottom", "top"]}
         id={props.id}
-        background={props.background}>
+        background={props.background}
+      >
         <GridBlock
           align="center"
           contents={props.children}
@@ -96,9 +97,13 @@ class Index extends React.Component {
     const FeatureCallout = () => (
       <div
         className="productShowcaseSection paddingBottom"
-        style={{ textAlign: "center" }}>
+        style={{ textAlign: "center" }}
+      >
         <h2>学无止境，永攀高峰</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
+        <MarkdownBlock>
+          语言：html5,js,ts,css,less,sass。框架：react,vue,angular.UI库：antd,element。数据可视化：echars,D3。游戏引擎：laya,白鹭。
+          辅助工具：webpack,glup,git,bable。规范：git,css等规范（eslint...）。微前端。微信小程序。app开发。组件化配置话开发。npm.
+        </MarkdownBlock>
       </div>
     );
 
