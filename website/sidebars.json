@@ -1,7 +1,7 @@
 {
   "docs": {
     "run and run": ["doc1", "form"],
-    "无规矩 不方圆": ["doc2"],
+    "无规矩 不方圆": ["cssnorm", "gitnorm"],
     "行万里路": [
       "doc3",
       "git",
