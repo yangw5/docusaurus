@@ -100,7 +100,7 @@ sidebar_label:es6
         //Object.create 的实现方式 create（）里面里面的参数为对象的原型对象
         Object.create = function (o) {
         var F = function () {};//创建一个空的构造函数
-        F.prototype = o;//设置原型对象
+        F.prototype = o;//设置原型对象  o的形式决定了f的原型对象形式
         return new F();//返回 F 的实例 所以 Object.create 创建的对象的**proto**指向 o
         };
 
