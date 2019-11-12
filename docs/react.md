@@ -43,6 +43,13 @@ sidebar_label: React
 
 ## 高阶组件（HOC）
 
-    高阶组件是一个函数，接收一个组件参数，返回新的组件。为实现组件代码的复用。
+    高阶组件是一个函数，接收一个组件组参数，返回新的组件。为实现组件代码的复用。（高级函数）
+    如：Form.creact()(component)
+
+    作用：属性代理，反向继承
 
     高阶组件内部的包装组件和被包装组件之间通过 props 传递数据。
+
+
+    注意:高阶函数正常情况拿不到ref antd的form是通过设置
+      wrappedComponentRef={(form) => this.formRef = form}  使用wrappedComponentRef 拿到子组件传递过来的ref。
