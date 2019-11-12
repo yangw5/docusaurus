@@ -92,7 +92,7 @@ sidebar_label:es6
     JavaScript 实际上执行的是：
 
          var o1 = new Object();//创建一个空对象 obj，创建上下文 this 指向空对象
-         o1.[[Prototype]] = Base.prototype;//获取构造函数的方法 \_\_proto\_\_指向构造函数的 prototype
+         o1.[[Prototype]] = Base.prototype;//获取构造函数的方法 \_\_proto\_\_指向构造函数的 prototype  [[Prototype]]等同于\_\_proto\_\_
          Base.call(o1);//将构造函数的 this 指向 obj，返回 this（如果显示返回对象，this 为该对象 否则为 obj）
 
 2.  Object.creact 的实现方式
@@ -100,7 +100,7 @@ sidebar_label:es6
         //Object.create 的实现方式 create（）里面里面的参数为对象的原型对象
         Object.create = function (o) {
         var F = function () {};//创建一个空的构造函数
-        F.prototype = o;//设置原型对象
+        F.prototype = o;//设置原型对象  o的形式决定了f的原型对象形式
         return new F();//返回 F 的实例 所以 Object.create 创建的对象的**proto**指向 o
         };
 
