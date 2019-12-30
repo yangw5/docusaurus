@@ -1,3 +1,13 @@
+/*
+ * @File:
+ * @Description:
+ * @Autor: yangw5
+ * @Email: yangw5@163.com
+ * @Date: 2019-08-15 17:27:02
+ * @LastEditors  : yangw5
+ * @LastEditTime : 2019-12-30 15:41:42
+ * @FilePath: \docusaurus\website\pages\en\help.js
+ */
 /**
  * Copyright (c) 2017-present, Facebook, Inc.
  *
