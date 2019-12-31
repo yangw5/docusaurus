@@ -1,5 +1,19 @@
 ## TypeScript
 
+### 编译上下文
+
+    tsconfig.json 的对象 用来配置 ts 那些文件有效和无效，定义编译的部分规则
+
+### 声明空间
+
+1. 类型声明空间
+
+2. 变量声明空间
+
+3. 全局命名空间：globals.d.ts /vendor.d.ts :保存着全局配置变量
+
+4. 文件模块（export /import {xx}from '../xxx'）
+
 ### 数据类型
 
 - 布尔值（boolean）//首字母小写为类型 大写为构造函数（除去 null underfind）
@@ -14,9 +28,15 @@
 
 - 任意类型（any）//未声明类型的会被默认识别为 any
 
-  let something;
-  something = 'seven';
-  something = 7;
+数组声明
+
+1. let arry:number[]
+
+2. let arry:Arry\<number>=[1,2]
+
+let something;
+something = 'seven';
+something = 7;
 
 类型推论
 
@@ -24,14 +44,36 @@
     myFavoriteNumber = 7;//报错
 
 - 联合类型 使用 |（或）//联合类型只可以访问它们公共的属性方法
-
+- 交叉类型：&：从两个对象中创建一个新对象，新对象会拥有着两个对象所有的功能
+- 元祖类型：let nameNumber: [string, number];
+- 类型别名: type StrOrNum=string|number
   let myFavoriteNumber: string | number;
   myFavoriteNumber = 'seven';
   myFavoriteNumber = 7;
 
+### 枚举 enum
+
+enum obj={
+v1,
+v2=3,
+v3='love',
+}
+
+1. 数字枚举
+
+   let value=obj.v1 // 0
+
+2. 字符串枚举
+
+   let value=obj[0]//'v1'
+
+3. 常量枚举
+
+4. 静态方法枚举
+
 ### 接口
 
-interface:于对类的一部分行为进行抽象，也常用于对「对象的形状（Shape）」进行描述。一般首字母大写。（不允许多和少属性）
+    interface:于对类的一部分行为进行抽象，也常用于对「对象的形状（Shape）」进行描述。一般首字母大写。（不允许多和少属性）。接口运行时的影响为 0。通过 implements 来兼容
 
     interface Person {
         name: string;
@@ -46,6 +88,10 @@ interface:于对类的一部分行为进行抽象，也常用于对「对象的�
 - 可选参数: ? eg: name?:string
 - 任意属性：[]:any eg: [propName: string]: string; //一旦定义了任意属性，那么确定属性和可选属性的类型都必须是它的类型的子集
 - 只读属性： rendonly eg: rendonly id:numeber; //只读的约束存在于第一次给对象赋值的时候，而不是第一次给只读属性赋值的时候：
+
+### 泛型
+
+    动态定义类型
 
 ### 数组类型
 
@@ -117,6 +163,8 @@ any 在数字中表示任意类型
 
 ### 文件声明
 
+globals.d.ts 保存着全局配置变量
+
 ### 内置对象
 
 ECMAScript 标准提供的内置对象有：
@@ -126,3 +174,11 @@ ECMAScript 标准提供的内置对象有：
 DOM 和 BOM 提供的内置对象有：
 
     Document、HTMLElement、Event、NodeList 等。
+
+### 命名空间（namespace）
+
+类似于 es 的匿名函数，防止命名冲突
+
+### declare:声明
+
+在 d.ts 起声明作用
