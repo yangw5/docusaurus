@@ -53,3 +53,27 @@ sidebar_label: React
 
     注意:高阶函数正常情况拿不到ref antd的form是通过设置
       wrappedComponentRef={(form) => this.formRef = form}  使用wrappedComponentRef 拿到子组件传递过来的ref。
+
+---函数组件
+
+---
+
+react 组件性能优化
+
+1. 针对无用的渲染
+
+- class 组件
+
+  1. shouldComponentUpdate
+
+     手动判断每次更新前后的 state 和 props 决定是否 updata
+
+  2. Pure Component
+
+     extends React.PureComponent，自动对更新前后的 state 和 props 进行浅比较
+
+- 函数组件
+
+  1. React.memo()包裹组件，类似于 Pure Component.
+
+     React.memo 会返回一个纯化(purified)的组件 MemoFuncComponent，这个组件将会在 JSX 标记中渲染出来。当组件的参数 props 和状态 state 发生改变时，React 将会检查前一个状态和参数是否和下一个状态和参数是否相同，如果相同，组件将不会被渲染，如果不同，组件将会被重新渲染。

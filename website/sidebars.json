@@ -6,13 +6,14 @@
       "doc3",
       "git",
       "react",
+      "react-cli",
       "antd",
       "Hook",
       "es6",
       "devmodul",
       "D3"
     ],
-    "项目开发": ["Ra"],
+    "项目开发": ["Ra", "react-cli"],
     "怪谈怪鱼": ["es6monster"]
   },
   "docs-other": {
