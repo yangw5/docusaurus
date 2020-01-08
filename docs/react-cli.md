@@ -4,17 +4,33 @@ title: React 脚手架开发
 sidebar_label: React 脚手架开发
 ---
 
-## 依赖
+## 基础依赖及目录
 
-          "dependencies": {
-                "chalk": "^3.0.0",
-                "commander": "^4.0.1",//node 命令行开发
-                "download-git-repo": "^3.0.2",
-                "inquirer": "^7.0.1",
-                "ora": "^4.0.3"
-            }
+- 基础依赖：
+
+        "dependencies": {
+        "chalk": "^3.0.0",//颜色
+        "commander": "^4.0.1",//node 命令行开发
+        "download-git-repo": "^3.0.2",//git模板配置
+        "inquirer": "^7.0.1",//命令行交互
+        "ora": "^4.0.3"
+        }
+
+- 基础目录
+
+        | -bin
+        |      react-cli.js
+        | -commands
+        |      init.js
+        |
+        | .package.json 项目 j 依赖
+        |
+        | .templates.json git 模板配置
+        |
 
 ## 入口文件 bin/react-cli.js 文件
+
+#!/usr/bin/env node，它的作用是指定 index.js 的执行程序 node
 
 ## commander
 
@@ -249,4 +265,4 @@ templates.json 用来存放模版信息,即项目 git 远程拉取项目模板�
             "place": "",
             "branch": ""
         }
-        }
+    }
