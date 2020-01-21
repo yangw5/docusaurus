@@ -116,7 +116,7 @@ npm install commander -g
 
 7.  on() //自定义相关信息
 
-8.  help(): 打印帮助信息并立即结束当前进程
+8.  help(): 打印帮助信息并立即结束当前进程 program.args ：未定义的参数
 
 9.  outputHelp()：打印帮助信息，然后等待用户继续输入信息，不结束当前进程
 

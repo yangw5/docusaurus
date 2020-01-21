@@ -12,7 +12,7 @@ sidebar_label: react 结合 antd 开发
 - css 变量切换
 - less 切换
 - less 结合 css 变量切换：antd-theme-generator 或者 antd-theme-webpack-plugin
-- 组件封装：包裹子组件，为子组件设置相应 css 类
+- 组件封装：包裹子组件，为子组件设置相应 css 类：css in js
 
 ### antd-theme-generator
 
@@ -186,3 +186,71 @@ sidebar_label: react 结合 antd 开发
 ## react 结合 antd 组件库开发
 
 form 表单组件开发：对 antd 组件进行二次开发
+
+### 表单基础组件的开发
+
+作为 form 表单的基础组件，包括 input,select,checkbox 等，提供基本的 api 接口。
+经 Form.create() 包装过的组件会自带 this.props.form 属性,基础组件的 form 及相关属性控制均由父组件传递。
+基础组件内部不可对特殊情况数据进行特别处理，都由外部组件传递相关函数予以控制。
+
+原理：通过 getFieldDecorator(field,option)(component)将基础组件和 form 表单进行数据的双向绑定。而不需要手动对基础表单组件进行 value 的绑定监听等。通过设置 option 的相关属性，实现对输入数据进行校验转化等。
+
+1. 组件展示样式定义
+
+- label 字段名
+- labelCol label 样式
+- wrpperCol 输入控件样式
+- addonAfter 输入控件额外 dom
+- placeholder 占位符
+
+2. 数据来源
+
+- initialValue：初始值
+- field:表单字段名
+- form
+
+3. 数据约束
+
+- rules
+
+  - max
+  - required
+  - validator ：自定义校验
+  - readOnly
+  - ruleType
+  - validateFirst
+
+4. 数据输出
+
+- form
+
+  - getFieldDecorator //数据双向绑定 同时设置数据相关约束条件
+
+        1. normalize ：转换默认的value值给控件
+            - valueFilter  //自定义方法 数据转换 格式化输出
+
+        2. initialValue：默认值
+        3. rules：校验规则
+           - max
+           - required
+           - transform：校验前转换字段值
+           - validator：自定义校验
+        4. getValueFromEvent：获取onChange的参数转化给控件
+
+  - getFieldsValue:获取一组组件的值
+  - getFieldValue：获取 form 的值
+  - setFields
+  - setFieldsValue ：手动修改 form 的值
+  - validateFields
+
+- callback：传递函数回调将数据暴露到外部组件（高阶函数）
+
+* form.item
+
+  - hasFeedback：提示图标 input 使用
+  - validateStatus:'success' 'warning' 'error' 'validating'
+  - help:提示信息
+
+### 表单自定义组件的开发
+
+在表单基础组件的开发的基础上，将表单双向绑定的基础组件设置为 input,作为隐藏域（<Input style={{ display: 'none' }} />），在设置自定义显示的组件（可以多组件组合）。通过给该组件绑定事件，监听该组件的状态变化，在通过 getFieldsValue 和 setFieldsValue 来手动获取和设置 form 的数据，从而实现 form 表单和自定义组件的数据绑定。
