@@ -29,21 +29,41 @@ function Help(props) {
   const langPart = `${language ? `${language}/` : ""}`;
   const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
+  const allitem = [
+    {
+      title: `[rollup](${docUrl(
+        "doc1.html"
+      )})`
+    },
+    {
+      title: `[storybook](${docUrl(
+        "doc1.html"
+      )})`
+    },
+  ];
+
+
   const supportLinks = [
     {
       content: `Learn more using the [documentation on this site.](${docUrl(
         "doc1.html"
       )})`,
-      title: "Browse Docs"
+      title: "构建工具"
     },
     {
-      content: "Ask questions about the documentation and project",
-      title: "Join the community"
+      content: `查看详细信息请前往[戳我](${docUrl(
+        "doc1.html"
+      )})`,
+      title: "组件库搭建"
     },
     {
       content: "Find out what's new with this project",
-      title: "Stay up to date"
-    }
+      title: "打包工具"
+    },
+    {
+      content: "Find out what's new with this project",
+      title: "测试工具"
+    },
   ];
 
   return (
@@ -52,7 +72,10 @@ function Help(props) {
         <div className="post">
           <header className="postHeader">
             <h1>朱雀</h1>
+            <h2>涉及到自己不会的，好玩的，有兴趣的，新兴的技术等</h2>
           </header>
+          <GridBlock contents={allitem} layout="threeColumn" />
+          <div style={{border:'1px solid red',height:'1px',width:'100%'}} />
           <GridBlock contents={supportLinks} layout="threeColumn" />
         </div>
       </Container>

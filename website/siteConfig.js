@@ -38,11 +38,17 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    { search: true },
     { doc: "doc1", label: "青龙" },
     { doc: "doc4", label: "白虎" },
     { page: "help", label: "朱雀" },
     { blog: true, label: "玄武" }
   ],
+  //搜索配置
+  algolia: {
+    apiKey: "my-search-only-api-key-1234",
+    indexName: "my-index-name"
+  },
 
   // If you have users set above, you add it here:
   users,
