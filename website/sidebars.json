@@ -1,22 +1,22 @@
 {
   "docs": {
-    "run and run": ["doc1", "form"],
-    "无规矩 不方圆": ["cssnorm", "gitnorm"],
-    "行万里路": [
-      "doc3",
+    "读万卷书": [
       "git",
       "react",
-      "react-cli",
-      "antd",
       "Hook",
       "es6",
       "devmodul",
-      "D3"
+      "D3",
+      "ts",
+      "jest",
+      "rollup",
+      "antd"
     ],
-    "项目开发": ["Ra", "react-cli", "http"],
-    "怪谈怪鱼": ["es6monster"]
+    "行万里路": ["doc1", "form"],
+    "规矩方圆": ["cssnorm", "gitnorm"],
+    "功法体系": ["Ra", "reactcli", "http","doc2"]
   },
   "docs-other": {
-    "First Category": ["doc4", "doc5", "antd"]
+    "咸鱼怪谈": ["doc4","doc5"]
   }
 }

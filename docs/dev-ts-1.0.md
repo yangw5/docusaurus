@@ -1,3 +1,8 @@
+---
+id: ts
+title: ts
+sidebar_label: ts
+---
 ## TypeScript
 
 ### 编译上下文

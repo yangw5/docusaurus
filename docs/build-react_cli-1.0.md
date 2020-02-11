@@ -1,5 +1,5 @@
 ---
-id: react-cli
+id: reactcli
 title: React 脚手架开发
 sidebar_label: React 脚手架开发
 ---

@@ -18,6 +18,8 @@
 const React = require("react");
 
 const CompLibrary = require("../../core/CompLibrary.js");
+// import tools from "../../static/tools/tool.js";
+// const tools=require('../../static/tools/tool.js');
 
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
@@ -28,7 +30,7 @@ function Help(props) {
   const docsPart = `${docsUrl ? `${docsUrl}/` : ""}`;
   const langPart = `${language ? `${language}/` : ""}`;
   const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
-
+  // const docUrl=tools.postUrl(siteConfig);
   const allitem = [
     {
       title: `[rollup](${docUrl(
